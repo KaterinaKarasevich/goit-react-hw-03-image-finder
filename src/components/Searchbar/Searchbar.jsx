@@ -1,6 +1,6 @@
 import { Component } from "react"
 //import PropTypes from 'prop-types'; 
-
+import loupe from "components/utilities/loupe.svg"
 import { SearchBarData, SearchForm, SearchFormButton, SearchFormButtonLabel, SearchFormInput } from "./Searchbar.styled"
 
 
@@ -21,7 +21,7 @@ render() {
 return (
 <SearchBarData>
   <SearchForm onSubmit={this.handleSubmit}>
-    <SearchFormButton type="submit">
+    <SearchFormButton type="submit" style={{ backgroundImage: `url(${loupe})` }}>
       <SearchFormButtonLabel>Search</SearchFormButtonLabel>
     </SearchFormButton>
 
