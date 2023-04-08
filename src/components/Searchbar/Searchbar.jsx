@@ -9,15 +9,19 @@ export class Searchbar extends Component {
       value: "",
   }
   
-handleChange = ({target: {value}}) => {
-  this.setState({value})
-}
+handleChange = (evt) => {
+    this.setState({ value: evt.currentTarget.value });
+    
+  };
 
 handleSubmit = (e) => {
   e.preventDefault()
   this.props.createSearchText(this.state.value)
+  this.setState({value: " "});
+  //console.log(this.state.value)
 }
-render() {
+  render() {
+  
 return (
 <SearchBarData>
   <SearchForm onSubmit={this.handleSubmit}>
