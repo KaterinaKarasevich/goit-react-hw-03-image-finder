@@ -1,4 +1,5 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
+import PropTypes from 'prop-types'; 
 import { Searchbar } from "components/Searchbar/Searchbar"
 
 import {Modal} from "components/Modal/Modal"
@@ -109,4 +110,16 @@ render() {
       )
     }
 }
+
+App.propTypes = {
+   searchQuery : PropTypes.string,
+    hits: PropTypes.array,
+    isLoading: PropTypes.bool,
+    isShowModal: PropTypes.bool,
+    selectedImg: PropTypes.string,
+    page: PropTypes.number,
+    totalHits: PropTypes.func,
+    error: PropTypes.string,
+}
+  
 

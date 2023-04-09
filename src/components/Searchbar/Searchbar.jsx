@@ -1,5 +1,5 @@
 import { Component } from "react"
-//import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types'; 
 import loupe from "components/utilities/loupe.svg"
 import { SearchBarData, SearchForm, SearchFormButton, SearchFormButtonLabel, SearchFormInput } from "./Searchbar.styled"
 
@@ -42,3 +42,8 @@ return (
 </SearchBarData>)
  }
 }
+
+Searchbar.propTypes = {
+   value : PropTypes.string,   
+}
+  
